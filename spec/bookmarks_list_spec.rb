@@ -2,9 +2,14 @@ require "bookmarks_list"
 
 describe BookmarksList do 
 
-  it "return list with bookmarks" do 
-    subject.add_to_list("First bookmark")
-    expect(subject.list.length).to be > 0
-  end
 
+
+  describe '#list' do
+    it 'includes url links' do
+    subject.add_to_list
+    expect(subject.list).to include 'http://www.makersacademy.com'
+    expect(subject.list).to include "http://www.google.com" 
+    expect(subject.list).to include "www.destroyallsoftware.com"
+    end
+  end
 end
