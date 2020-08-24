@@ -6,4 +6,8 @@ class BookmarkApp < Sinatra::Base
         'Bookmark App'
     end
 
+    get '/bookmarks' do
+        erb :bookmarks
+    end
+
 end
