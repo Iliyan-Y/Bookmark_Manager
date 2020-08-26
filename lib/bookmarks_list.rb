@@ -8,9 +8,17 @@ class BookmarksList
   end
 
   def add_to_list
-    connection = PG.connect(dbname: 'bookmark_manager')
+    env_check
     result = connection.exec('SELECT * FROM bookmarks')
     result.each { |bookmark| @list << bookmark['url']}
+  end
+
+  def env_check
+    if ENV['ENVIRONMENT'] == 'test'
+      @connection = PG.connect(dbname: 'bookmark_manager_test')
+    else
+      @connection = PG.connect(dbname: 'bookmark_manager')
+    end
   end
 
     
