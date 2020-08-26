@@ -9,13 +9,13 @@ class BookmarksList
 
   def add_to_list
     env_check
-    result = connection.exec('SELECT * FROM bookmarks')
+    result = @connection.exec('SELECT * FROM bookmarks')
     result.each { |bookmark| @list << bookmark['url']}
   end
 
   def env_check
     if ENV['ENVIRONMENT'] == 'test'
-      @connection = PG.connect(dbname: 'bookmark_manager_test')
+      @connection = PG.connect(dbname: 'bookmarks_manager_test')
     else
       @connection = PG.connect(dbname: 'bookmark_manager')
     end

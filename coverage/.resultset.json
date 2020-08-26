@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/joshsteadman/Projects/Makers_projects/week_4/Bookmark_Manager/spec/bookmark_spec.rb": {
+      "/Users/Maximize/Desktop/Makers/week4/Bookmark_Manager/spec/bookmark_spec.rb": {
         "lines": [
           1,
           null,
@@ -11,7 +11,7 @@
           null
         ]
       },
-      "/Users/joshsteadman/Projects/Makers_projects/week_4/Bookmark_Manager/lib/bookmark.rb": {
+      "/Users/Maximize/Desktop/Makers/week4/Bookmark_Manager/lib/bookmark.rb": {
         "lines": [
           1,
           null,
@@ -24,17 +24,21 @@
           null
         ]
       },
-      "/Users/joshsteadman/Projects/Makers_projects/week_4/Bookmark_Manager/spec/bookmarks_list_spec.rb": {
+      "/Users/Maximize/Desktop/Makers/week4/Bookmark_Manager/spec/bookmarks_list_spec.rb": {
         "lines": [
           1,
           null,
           1,
-          null,
-          null,
+          1,
+          1,
+          1,
           null,
           1,
           1,
           1,
+          null,
+          1,
+          null,
           1,
           1,
           1,
@@ -43,7 +47,7 @@
           null
         ]
       },
-      "/Users/joshsteadman/Projects/Makers_projects/week_4/Bookmark_Manager/spec/features/bookmark_home_spec.rb": {
+      "/Users/Maximize/Desktop/Makers/week4/Bookmark_Manager/spec/features/bookmark_home_spec.rb": {
         "lines": [
           null,
           1,
@@ -54,19 +58,31 @@
           null
         ]
       },
-      "/Users/joshsteadman/Projects/Makers_projects/week_4/Bookmark_Manager/spec/features/bookmarks_route_spec.rb": {
+      "/Users/Maximize/Desktop/Makers/week4/Bookmark_Manager/spec/features/bookmarks_route_spec.rb": {
         "lines": [
           1,
+          null,
+          1,
+          null,
+          1,
+          1,
+          null,
+          null,
           1,
           1,
           1,
+          null,
+          1,
+          null,
           1,
           1,
+          1,
+          null,
           null,
           null
         ]
       }
     },
-    "timestamp": 1598286789
+    "timestamp": 1598450227
   }
 }
