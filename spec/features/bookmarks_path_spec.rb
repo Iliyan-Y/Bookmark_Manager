@@ -2,12 +2,7 @@
 feature "Viewing bookmarks" do 
 
   scenario "Show list of bookmarks" do
-    BookmarksList.create('http://www.makersacademy.com', 'makers')
-    BookmarksList.create('http://www.destroyallsoftware.com', "destroy")
-    BookmarksList.create('http://www.google.com', "google")
-
-    visit('/bookmarks')
-
+    create_n_visit_bookmarks
     expect(page).to have_link("makers", href:"http://www.makersacademy.com")
     expect(page).to have_link("destroy", href:"http://www.destroyallsoftware.com")
     expect(page).to have_link("google", href:"http://www.google.com")
@@ -22,6 +17,17 @@ feature "Viewing bookmarks" do
     click_button "Submit"
     expect(page).to have_link("diagrams", href:"https://www.diagram.codes/")
 
+  end
+
+  scenario "User can delete bookmark" do 
+    create_n_visit_bookmarks
+    first('.bookmark').click_button 'Delete'
+
+    expect(current_path).to eq '/bookmarks'
+   
+    expect(page).not_to have_link("makers", href:"http://www.makersacademy.com")
+    expect(page).to have_link("destroy", href:"http://www.destroyallsoftware.com")
+    expect(page).to have_link("google", href:"http://www.google.com")
   end
 
 end

@@ -8,6 +8,7 @@ require 'simplecov-console'
 require 'capybara'
 require 'rspec'
 require_relative 'setup_test_db'
+require_relative 'web_helper'
 
 
 Capybara.app = BookmarkApp

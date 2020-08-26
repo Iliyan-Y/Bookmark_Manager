@@ -24,4 +24,12 @@ describe BookmarksList do
     end
   end
 
+  describe "#delete" do 
+    it "delete a bookmark based on url" do 
+      bookmark = BookmarksList.create("http://www.github.com","github")
+      BookmarksList.delete(bookmark.first["id"])
+      expect(BookmarksList.get_bookmarks.first).to be nil
+    end
+  end
+
 end

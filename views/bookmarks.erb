@@ -1,6 +1,17 @@
 <div>
+<ul>
 <% @list.map do |bookmark|  %>
-    <a href='<%=bookmark["url"]%>'><%= bookmark["title"] %> </a>
+    <li class="bookmark" id="bookmark-<%= bookmark['id'] %>">
+
+        <a href='<%=bookmark["url"]%>'><%= bookmark["title"] %> </a>
+
+        <form action="/bookmarks/<%= bookmark['id'] %>" method="post">
+            <%# <input type='hidden' name='_method' value='DELETE'/>
+            <input type="submit" value="Delete" /> %>
+            <button type=submit >Delete</button>
+        </form>
+    </li>
 <% end %>
+</ul>
 </div>
 <a href="/create">Add Bookmark</a>
