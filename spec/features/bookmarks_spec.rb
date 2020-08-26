@@ -1,14 +1,10 @@
-require 'pg'
 
 feature "Viewing bookmarks" do 
 
   scenario "Show list of bookmarks" do
-    connection = PG.connect(dbname: 'bookmarks_manager_test')
-
-    # Add the test data
-    connection.exec("INSERT INTO bookmarks VALUES(1, 'http://www.makersacademy.com');")
-    connection.exec("INSERT INTO bookmarks VALUES(2, 'http://www.destroyallsoftware.com');")
-    connection.exec("INSERT INTO bookmarks VALUES(3, 'http://www.google.com');")
+    BookmarksList.create('http://www.makersacademy.com')
+    BookmarksList.create('http://www.destroyallsoftware.com')
+    BookmarksList.create('http://www.google.com')
 
     visit('/bookmarks')
 
