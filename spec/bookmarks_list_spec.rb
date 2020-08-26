@@ -4,9 +4,9 @@ describe BookmarksList do
 
   describe '#get_bookmarks' do
     it 'Gets all bookmarks from the databese' do    
-      BookmarksList.create('http://www.makersacademy.com')
-      BookmarksList.create('http://www.destroyallsoftware.com')
-      BookmarksList.create('http://www.google.com')
+      BookmarksList.create('http://www.makersacademy.com', "makers")
+      BookmarksList.create('http://www.destroyallsoftware.com', "destroy")
+      BookmarksList.create('http://www.google.com', "google")
 
       bookmarks = BookmarksList.get_bookmarks
   
@@ -18,9 +18,9 @@ describe BookmarksList do
 
   describe "#create" do 
     it "Add a new bookmark to the database" do 
-      BookmarksList.create("http://www.github.com")
-      bookmarks = BookmarksList.get_bookmarks
-      expect(bookmarks.first['url']).to include('http://www.github.com')
+      bookmark = BookmarksList.create("http://www.github.com","github")
+      expect(bookmark.first['url']).to include('http://www.github.com')
+      expect(bookmark.first['title']).to eq "github"
     end
   end
 

@@ -7,9 +7,9 @@ class BookmarksList
     result.each { |bookmark| bookmark}
   end
 
-  def self.create(url)
+  def self.create(url, title)
     connect
-    @connection.exec("INSERT INTO bookmarks (url) VALUES ('#{url}');")
+    @connection.exec("INSERT INTO bookmarks (url, title) VALUES ('#{url}', '#{title}') RETURNING id, url, title;")
   end
 
   def self.connect

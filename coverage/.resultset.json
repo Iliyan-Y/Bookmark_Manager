@@ -1,29 +1,6 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/Maximize/Desktop/Makers/week4/Bookmark_Manager/spec/bookmark_spec.rb": {
-        "lines": [
-          1,
-          null,
-          1,
-          2,
-          2,
-          null
-        ]
-      },
-      "/Users/Maximize/Desktop/Makers/week4/Bookmark_Manager/lib/bookmark.rb": {
-        "lines": [
-          1,
-          null,
-          1,
-          null,
-          1,
-          1,
-          null,
-          null,
-          null
-        ]
-      },
       "/Users/Maximize/Desktop/Makers/week4/Bookmark_Manager/spec/bookmarks_list_spec.rb": {
         "lines": [
           1,
@@ -55,10 +32,9 @@
           null
         ]
       },
-      "/Users/Maximize/Desktop/Makers/week4/Bookmark_Manager/spec/features/bookmarks_spec.rb": {
+      "/Users/Maximize/Desktop/Makers/week4/Bookmark_Manager/spec/features/bookmarks_path_spec.rb": {
         "lines": [
           null,
-          null,
           1,
           null,
           1,
@@ -75,6 +51,7 @@
           null,
           1,
           null,
+          1,
           1,
           1,
           1,
@@ -98,6 +75,6 @@
         ]
       }
     },
-    "timestamp": 1598454718
+    "timestamp": 1598457090
   }
 }
