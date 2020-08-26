@@ -9,11 +9,12 @@ describe BookmarksList do
     connection.exec("INSERT INTO bookmarks (url) VALUES('http://www.destroyallsoftware.com');")
     connection.exec("INSERT INTO bookmarks (url) VALUES('http://www.google.com');")
 
-    subject.add_to_list
+    bookmarks = BookmarksList.get_bookmarks
+    p bookmarks[0]
     
-    expect(subject.list).to include('http://www.makersacademy.com')
-    expect(subject.list).to include('http://www.destroyallsoftware.com')
-    expect(subject.list).to include('http://www.google.com')
+    expect(bookmarks[0]['url']).to include('http://www.makersacademy.com')
+    expect(bookmarks[1]['url']).to include('http://www.destroyallsoftware.com')
+    expect(bookmarks[2]['url']).to include('http://www.google.com')
     end
   end
 end

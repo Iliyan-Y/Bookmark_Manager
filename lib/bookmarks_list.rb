@@ -1,19 +1,13 @@
 require 'pg'
 class BookmarksList 
 
-  attr_reader :list
-
-  def initialize
-    @list = []
-  end
-
-  def add_to_list
+  def self.get_bookmarks
     env_check
     result = @connection.exec('SELECT * FROM bookmarks')
-    result.each { |bookmark| @list << bookmark['url']}
+    result.each { |bookmark| bookmark}
   end
 
-  def env_check
+  def self.env_check
     if ENV['ENVIRONMENT'] == 'test'
       @connection = PG.connect(dbname: 'bookmarks_manager_test')
     else

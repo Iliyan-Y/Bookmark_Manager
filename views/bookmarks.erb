@@ -1,3 +1,3 @@
 <% @list.map do |bookmark|  %>
-    <a href='<%=bookmark%>'><%= bookmark %> </a>
+    <a href='<%=bookmark["url"]%>'><%= bookmark["url"] %> </a>
 <% end %>
