@@ -2,12 +2,17 @@ require 'pg'
 class BookmarksList 
 
   def self.get_bookmarks
-    env_check
+    connect
     result = @connection.exec('SELECT * FROM bookmarks')
     result.each { |bookmark| bookmark}
   end
 
-  def self.env_check
+  def self.create(url)
+    connect
+    @connection.exec("INSERT INTO bookmarks (url) VALUES ('#{url}');")
+  end
+
+  def self.connect
     if ENV['ENVIRONMENT'] == 'test'
       @connection = PG.connect(dbname: 'bookmarks_manager_test')
     else

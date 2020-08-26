@@ -1,3 +1,6 @@
+<div>
 <% @list.map do |bookmark|  %>
     <a href='<%=bookmark["url"]%>'><%= bookmark["url"] %> </a>
 <% end %>
+</div>
+<a href="/create">Add Bookmark</a>
