@@ -1,5 +1,6 @@
 require 'sinatra/base'
 require './lib/bookmarks_list'
+require './db_connection_setup'
 
 class BookmarkApp < Sinatra::Base
     enable :method_override

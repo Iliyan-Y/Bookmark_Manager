@@ -51,6 +51,40 @@
           null
         ]
       },
+      "/Users/Maximize/Desktop/Makers/week4/Bookmark_Manager/spec/database_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          null,
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          1,
+          null,
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
       "/Users/Maximize/Desktop/Makers/week4/Bookmark_Manager/spec/features/bookmarks_path_spec.rb": {
         "lines": [
           null,
@@ -128,6 +162,6 @@
         ]
       }
     },
-    "timestamp": 1598607672
+    "timestamp": 1598609949
   }
 }
