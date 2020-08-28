@@ -32,4 +32,15 @@ describe BookmarksList do
     end
   end
 
+  describe "#update" do 
+    it "Updates existing bookmark" do 
+      bookmark = BookmarksList.create('http://www.makersacademy.com', "makers")
+     
+      BookmarksList.update(bookmark[0]["id"], "http://www.google.com", "google")
+
+      expect(BookmarksList.get_bookmarks[0]["title"]).to eq "google"
+
+    end
+  end
+
 end
