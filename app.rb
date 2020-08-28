@@ -2,7 +2,7 @@ require 'sinatra/base'
 require './lib/bookmarks_list'
 
 class BookmarkApp < Sinatra::Base
-
+    enable :method_override
 
     get '/' do
         'Bookmark App'
@@ -25,5 +25,18 @@ class BookmarkApp < Sinatra::Base
     post "/bookmarks/:id" do
         BookmarksList.delete(params[:id])
         redirect "/bookmarks" 
+    end
+
+    get "/update/:id/e" do 
+        @id = params[:id]
+        erb :update
+    end
+
+    patch "/bookmarks/:id" do 
+
+        connection = PG.connect(dbname: 'bookmark_manager')
+        connection.exec("UPDATE bookmarks SET title = '#{params[:title]}', url = '#{params[:url]}' WHERE id = '#{params[:id]}';")
+ 
+        redirect "/bookmarks"
     end
 end

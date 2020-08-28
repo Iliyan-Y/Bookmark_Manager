@@ -70,6 +70,9 @@
           1,
           null,
           1,
+          null,
+          null,
+          1,
           1,
           1,
           null,
@@ -87,8 +90,33 @@
           null,
           null
         ]
+      },
+      "/Users/Maximize/Desktop/Makers/week4/Bookmark_Manager/spec/features/update_spec.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null
+        ]
       }
     },
-    "timestamp": 1598461807
+    "timestamp": 1598603486
   }
 }

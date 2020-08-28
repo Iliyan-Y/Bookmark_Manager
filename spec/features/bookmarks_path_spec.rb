@@ -21,9 +21,12 @@ feature "Viewing bookmarks" do
 
   scenario "User can delete bookmark" do 
     create_n_visit_bookmarks
+    expect(page).to have_link('makers', href: 'http://www.makersacademy.com')
+    
     first('.bookmark').click_button 'Delete'
 
     expect(current_path).to eq '/bookmarks'
+
    
     expect(page).not_to have_link("makers", href:"http://www.makersacademy.com")
     expect(page).to have_link("destroy", href:"http://www.destroyallsoftware.com")
